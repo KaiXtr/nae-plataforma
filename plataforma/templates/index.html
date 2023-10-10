@@ -1,0 +1,67 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+Núcleo de Apoio a Empreendimentos
+{% endblock %}
+
+{% block nav %}
+<div class="banner menor" style="background-image: url('{% static "/media/images/placeholder.jpg" %}')"></div>
+<nav>
+    <h1>Núcleo de Apoio a Empreendimentos</h1>
+    <div class="colunas">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, nulla nec interdum tincidunt, ex ipsum porta nibh, id consequat est risus id elit. In ligula enim, dictum ac orci quis, lacinia auctor massa. Suspendisse fringilla metus non ex aliquam pharetra. Nam viverra leo ac nisl molestie porttitor. Nulla leo sem, porttitor id rutrum vitae, mattis a risus. In dignissim augue nec ex malesuada, a maximus magna mattis. Nulla venenatis aliquam suscipit. Aliquam facilisis non ex tincidunt condimentum. Phasellus dictum erat id magna commodo congue. In lectus turpis, congue ut rhoncus et, fermentum fermentum diam. Fusce sollicitudin eu mi a placerat. Proin malesuada dolor ut nibh condimentum, sed posuere leo suscipit. Pellentesque feugiat ipsum sem, sed consectetur tortor porttitor vel. Cras sed massa a felis vehicula imperdiet. Nulla eget tempus leo.
+        </p>
+        <img class="imagemConteudo" title="exemplo" alt="exemplo">
+    </div>
+    <p>
+        Cras condimentum semper mi, vel tristique enim. Nulla erat orci, venenatis ut iaculis vel, gravida pharetra arcu. Maecenas molestie pretium ligula. Sed vitae metus ac orci elementum ullamcorper. Cras non augue vitae tellus pellentesque venenatis sit amet a orci. Nam sit amet odio condimentum, imperdiet enim eu, posuere nulla. Mauris eros nisi, ornare eget metus ullamcorper, maximus placerat lectus. Etiam finibus dolor orci, quis tristique elit malesuada nec. Pellentesque porttitor urna id elementum dignissim. Ut sagittis quis lectus in sodales. Aenean libero leo, vestibulum vitae rhoncus ut, elementum eu tellus. Duis sit amet lorem eu risus tempus volutpat. Etiam a egestas orci. Maecenas leo mauris, imperdiet a orci ac, dictum auctor lorem. Integer a velit ac nisl feugiat rutrum. Ut consectetur, sem non facilisis mattis, enim urna gravida ligula, ut efficitur neque lectus et ex. 
+    </p>
+    <button class="entradaBotao maior" onclick="window.location.href='#quemsomos'">Saiba Mais!</button>
+</nav>
+<div class="banner menor" style="background-image: url({% static "media/images/placeholder2.jpg" %})"></div>
+<nav>
+    <a class="ancora" id="quemsomos"></a>
+    <h1>Quem somos?</h1>
+    <p>
+        O Núcleo de Apoio a Empreendimentos é isso e isso.
+    </p>
+    <div class="colunas">
+        {% for i in retratos %}
+        <div class="perfilRetrato">
+            <img src="{% static '/media/images/profilepic.jpg' %}" title="{{i.1}}" alt="Foto de {{i.1}}">
+            <h3>{{i.1}}</h3>
+            <p>
+                {{i.2}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr class="separador">
+
+    <a class="ancora" id="metodologia"></a>
+    <h1>Metodologia</h1>
+    <p>
+        <fieldset class="metodosCampos">
+            <legend>Pensar</legend>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, nulla nec interdum tincidunt, ex ipsum porta nibh, id consequat est risus id elit.
+            </p>
+        </fieldset>
+        <fieldset class="metodosCampos">
+            <legend>Experimentar</legend>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, nulla nec interdum tincidunt, ex ipsum porta nibh, id consequat est risus id elit.
+            </p>
+        </fieldset>
+        <fieldset class="metodosCampos">
+            <legend>Gerenciar</legend>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, nulla nec interdum tincidunt, ex ipsum porta nibh, id consequat est risus id elit.
+            </p>
+        </fieldset>
+    </p>
+</nav>
+{% endblock %}

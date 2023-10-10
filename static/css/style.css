@@ -1,0 +1,323 @@
+/*************************************
+****** CONFIGURAÇÕES BÁSICAS *********
+*************************************/
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+
+:root {
+    --fonte: #192218;
+    --link: #1b6e2d;
+    --link-ativo: #37bd54;
+    --topo: #9fff82;
+    --fundo: #ffffff;
+    --rodape: #4fa136;
+    --aviso: #ff4c2d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--fonte);
+    font-family: 'Poppins',sans-serif;
+    margin: 0px;
+}
+
+a:link, a:visited {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-ativo);
+    text-decoration: none;
+}
+a.ancora {
+    top: -100px;
+    position: relative;
+}
+
+/*************************************
+********** BARRA SUPERIOR ************
+*************************************/
+header#barraSuperior {
+    background-color: var(--topo);
+    padding: 30px 0px 30px 0px;
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    transition-duration: .1s;
+    z-index: 5;
+}
+
+header#barraSuperior:hover {
+    opacity: 100%;
+}
+
+header#barraSuperior ul {
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+header#barraSuperior ul li {
+    list-style: none;
+    margin: 0% 5% 0% 0%;
+    display: inline-block;
+    transition-duration: .2s;
+}
+
+header#barraSuperior ul li:hover {
+    transform: scale(1.1);
+}
+
+header#barraSuperior button#linksHamburguer {
+    background-color: var(--topo);
+    border: 0px;
+    margin-left: 5%;
+    transition-duration: .2s;
+}
+
+header#barraSuperior button#linksHamburguer:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/*************************************
+*************** BANNER ***************
+*************************************/
+div.banner {
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    min-height: 900px;
+    z-index: 0;
+}
+
+div.banner.menor {
+    min-height: 600px;
+}
+
+/*************************************
+************** CONTEÚDO **************
+*************************************/
+nav {
+    background-color: var(--fundo);
+    line-height: 26pt;
+    margin: 8%;
+    min-height: 600px;
+}
+
+nav h1 {
+    font-size: 28pt;
+    transition-duration: .2s;
+    line-height: 46pt;
+    width: fit-content;
+}
+
+nav h1:hover {
+    transform: translateX(10px);
+}
+
+nav p {
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+nav div.colunas p {
+    margin-right: 5%;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+nav div.colunas div.perfilRetrato {
+    background-color: var(--topo);
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 10%;
+    display: inline-block;
+    transition-duration: .1s;
+}
+
+nav div.colunas div.perfilRetrato:hover {
+    transform: translateY(-10px);
+}
+
+nav div.colunas div.perfilRetrato img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+nav div.colunas div.perfilRetrato h3 {
+    margin: 0px;
+}
+
+nav div.colunas div.perfilRetrato p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+nav img.imagemConteudo {
+    background-color: var(--fonte);
+    width: 40%;
+    height: 400px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+nav fieldset.metodosCampos {
+    border-color: var(--rodape);
+    margin-right: 5%;
+    width: 25%;
+    display: inline-block;
+    transition-duration: .1s;
+}
+
+nav fieldset.metodosCampos:hover {
+    transform: scale(1.1);
+}
+
+nav fieldset.metodosCampos legend {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+nav div.entrarCampos, div.caixaFlutuante {
+    align-items: start;
+}
+
+div.caixaFlutuante {
+    background-color: var(--fundo);
+    padding: 5%;
+    margin: 5%;
+    margin-top: 200px;
+    margin-bottom: 500px;
+    position: absolute;
+    z-index: 1;
+}
+
+nav div.entrarCampos div, div.caixaFlutuante div.caixaCol {
+    text-align: justify;
+    border-color: var(--fonte);
+    margin-right: 5%;
+    width: 40%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+div.caixaFlutuante div.caixaCol:last-child {
+    margin-right: 0px;
+}
+
+hr.separador {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+/*************************************
+************* ENTRADAS ***************
+*************************************/
+label {
+    font-size: 14pt;
+}
+
+label.entradaObrigatoria::after {
+    color: var(--aviso);
+    content: '*';
+}
+
+input.entradaTexto {
+    font-size: 14pt;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input.entradaCaixa:hover {
+    cursor: pointer;
+}
+
+.entradaBotao {
+    color: var(--topo);
+    font-size: 10pt;
+    font-weight: bolder;
+    background-color: var(--link-ativo);
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    transition-duration: .1s;
+}
+
+.entradaBotao.maior {
+    font-size: 18pt;
+    margin-left: 30%;
+    width: 30%;
+}
+
+.entradaBotao:hover {
+    background-color: var(--link);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*************************************
+*************** RODAPÉ ***************
+*************************************/
+footer {
+    text-align: center;
+    background-color: var(--rodape);
+    padding: 50px 0px 50px 0px;
+    width: 100%;
+    z-index: 4;
+}
+
+/*************************************
+************** POP-UPS ***************
+*************************************/
+div#avisoCookies {
+    background-color: var(--fundo);
+    border: 1px solid var(--topo);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5%;
+    bottom: 30px;
+    position: fixed;
+}
+
+/*************************************
+*************** MOBILE ***************
+*************************************/
+@media all and (min-width:769px) and (max-width: 800px) {
+    header#barraSuperior div#linksSuperiores {
+        width: 90%;
+        height: 100%;
+        position: fixed;
+    }
+    header#barraSuperior div#linksSuperiores ul li {
+        display: block;
+    }
+    div.banner {
+        min-height: 400px;
+    }
+    div.banner.menor {
+        min-height: 100px;
+    }
+    nav div.colunas p {
+        margin-right: 0px;
+        width: 100%;
+        display: block;
+    }
+    nav div.entrarCampos div, div.caixaFlutuante div.caixaCol {
+        width: 80%;
+        display: block;
+    }
+    div.caixaFlutuante {
+        padding: 5%;
+        margin: 0px;
+    }
+    nav fieldset.metodosCampos {
+        margin-bottom: 50px;
+        width: 90%;
+        display: block;
+    }
+}

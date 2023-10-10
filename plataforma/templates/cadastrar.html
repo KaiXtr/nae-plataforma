@@ -1,0 +1,42 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+Cadastrar | Núcleo de Apoio a Empreendimentos
+{% endblock %}
+
+{% block nav %}
+<div class="banner" style="background-image: url({% static '/media/images/placeholder.jpg' %})">
+    <div class="caixaFlutuante">
+        <div class="caixaCol">
+            <h1>Cadastrar</h1>
+            <form method="POST">
+                {% csrf_token %}
+
+                <label for="nome" class="entradaObrigatoria">Nome: </label>
+                <input id="nome" class="entradaTexto" type="text" name="nome" placeholder="fulano...">
+                <br>
+                <label for="sobrenome">Sobrenome: </label>
+                <input id="sobrenome" class="entradaTexto" type="text" name="sobrenome" placeholder="de tal (opcional)">
+                <br>
+                <label for="email" class="entradaObrigatoria">Email: </label>
+                <input id="email" class="entradaTexto" type="email" name="email" placeholder="fulano@mail.com">
+                <br>
+                <label for="senha" class="entradaObrigatoria">Senha: </label>
+                <input id="senha" class="entradaTexto" type="password" name="senha" placeholder="">
+                <br>
+                <label for="confsenha" class="entradaObrigatoria">Confirmar senha: </label>
+                <input id="confsenha" class="entradaTexto" type="password" name="confsenha" placeholder="">
+                <br>
+                <a href="/entrar">Já tem uma conta? Entre</a><br>
+                <input class="entradaCaixa" type="checkbox"> Mantenha-me conectado<br>
+                <input class="entradaCaixa" type="checkbox"> Concordo com os termos e condições<br>
+                <input class="entradaBotao" type="submit" value="Cadastrar">
+            </form>
+        </div>
+        <div class="caixaCol">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt, nulla nec interdum tincidunt, ex ipsum porta nibh, id consequat est risus id elit. In ligula enim, dictum ac orci quis, lacinia auctor massa. Suspendisse fringilla metus non ex aliquam pharetra. Nam viverra leo ac nisl molestie porttitor. Nulla leo sem, porttitor id rutrum vitae, mattis a risus. In dignissim augue nec ex malesuada, a maximus magna mattis. Nulla venenatis aliquam suscipit. Aliquam facilisis non ex tincidunt condimentum. Phasellus dictum erat id magna commodo congue. In lectus turpis, congue ut rhoncus et, fermentum fermentum diam. Fusce sollicitudin eu mi a placerat. Proin malesuada dolor ut nibh condimentum, sed posuere leo suscipit. Pellentesque feugiat ipsum sem, sed consectetur tortor porttitor vel. Cras sed massa a felis vehicula imperdiet. Nulla eget tempus leo. 
+        </div>
+    </div>
+</div>
+{% endblock %}

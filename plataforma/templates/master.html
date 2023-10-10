@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Núcleo de Apoio a Empreendimentos">
+    <meta name="keywords" content="IFB, São Sebastião, Brasília, Instituto, Empreendimentos, Empreendedor, Negócio">
+    <meta name="author" content="Ewerton Bramos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.ico' %}" >
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="https://kit.fontawesome.com/597fea8ed7.js" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="{% static 'js/script.js' %}" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="barraSuperior">
+        <button id="linksHamburguer" onclick="exibirMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="linksSuperiores">
+            <ul>
+                {% for k,v in links.items %}
+                <li><a href="/{{v}}">{{k}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!--
+        {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+        {% endif %}-->
+    </header>
+    {% block nav %}    
+    {% endblock %}
+    <footer>
+        <i class="fa-brands fa-instagram"></i>
+        <br>
+        Instituto Federal de Brasília - São Sebastião - 2023
+    </footer>
+    <div id="avisoCookies">
+        Este website utiliza cookies.
+        <button class="entradaBotao" onclick="dispensarCookies()">
+            Ok
+        </button>
+    </div>
+</body>
+</html>
