@@ -8,6 +8,20 @@ function exibirMenu() {
     }
 }
 
+function mostrarSenha() {
+    if ($("#senha").hasClass("visivel")){
+        $("#senha").attr("type","password");
+        $("#senha").removeClass("visivel");
+        $("#olhoSenha").addClass("fa-eye");
+        $("#olhoSenha").removeClass("fa-eye-slash");
+    }else{
+        $("#senha").attr("type","text");
+        $("#senha").addClass("visivel");
+        $("#olhoSenha").addClass("fa-eye-slash");
+        $("#olhoSenha").removeClass("fa-eye");
+    }
+}
+
 function dispensarCookies() {
     $("#avisoCookies").hide();
 }

@@ -228,9 +228,15 @@ label.entradaObrigatoria::after {
 }
 
 input.entradaTexto {
+    font-size: 12pt;
+    padding: 5px;
+    margin-bottom: 10px;
+    transition-duration: .1s;
+}
+
+input.entradaTexto:focus {
     font-size: 14pt;
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 input.entradaCaixa:hover {
@@ -282,6 +288,7 @@ div#avisoCookies {
     margin-left: 5%;
     bottom: 30px;
     position: fixed;
+    z-index: 10;
 }
 
 /*************************************
